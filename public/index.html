@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Remadata Dashboard</title>
+<style>
+body { font-family: Arial; text-align: center; padding: 40px; }
+input, select, button { margin: 10px; padding: 10px; font-size: 16px; }
+#log, #balance { margin-top: 20px; font-family: monospace; }
+</style>
+</head>
+<body>
+<h1>Remadata Dashboard</h1>
+
+<input type="text" id="phone" placeholder="Enter phone number" />
+
+<div>
+    <button onclick="selectNetwork('mtn')">MTN</button>
+    <button onclick="selectNetwork('vodafone')">Vodafone</button>
+    <button onclick="selectNetwork('airteltigo')">AirtelTigo</button>
+</div>
+
+<select id="plan">
+    <option value="">Select plan</option>
+</select>
+<br>
+<button onclick="buyBundle()">Buy Bundle</button>
+<button onclick="getWalletBalance()">Check Wallet Balance</button>
+
+<div id="balance"></div>
+<div id="log"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
